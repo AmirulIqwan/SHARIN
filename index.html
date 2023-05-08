@@ -87,11 +87,43 @@
     
         </div>
 
-        <input type="submit" value="proceed to checkout" class="submit-btn">
-
+        
     </form>
 
+    <input type="submit" value="proceed to checkout" class="submit-btn" onclick="openPopup()">
+
+
 </div>    
+
+<div class="container">
+    <div class="popup" id="popup">
+        <img src="images/tick.png" alt="">
+        <h2>Thank You!</h2>
+        <p>Your account has been deducted. Thanks for purchasing!</p>
+        <button type="button" id="ok-btn" onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script>
+    let popup = document.getElementById("popup");
+    
+    function openPopup(){
+        popup.classList.add("open-popup");
+    }
+    
+    function closePopup(){
+        popup.classList.remove("open-popup");
+    }
+
+    const checkoutBtn = document.getElementById('ok-btn');
+checkoutBtn.addEventListener('click', () => {
+  const inputFields = document.querySelectorAll('input:not([type="submit"])');
+  inputFields.forEach((input) => {
+    input.value = '';
+  });
+});
+    
+</script>
     
 </body>
 </html>
