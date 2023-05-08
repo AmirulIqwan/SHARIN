@@ -78,16 +78,75 @@
   filter: drop-shadow(0 0 1px #000);
 }
 
-.container form .submit-btn{
-  width: 100%;
+.submit-btn{
+  width: 51.5%;
   padding:12px;
   font-size: 17px;
-  background: #27ae60;
+  background: #6fd649;
   color:#fff;
-  margin-top: 5px;
+  margin-top: 610px;
   cursor: pointer;
 }
 
-.container form .submit-btn:hover{
-  background: #2ecc71;
+.container form{
+  width: 50%;
+  padding:12px;
+  font-size: 17px;
+  background: #ffffff;
+  color:#000000;
+  margin-top: 5px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.submit-btn:hover{
+  background: #42af1a;
+}
+
+.popup{
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1);
+}
+
+.popup img{
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2{
+  font-size: 38px;
+  font-weight: 500;
+  margin: 3opx 0 10px;
+}
+
+.popup button{
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: #6fd649;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
